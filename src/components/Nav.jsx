@@ -5,8 +5,8 @@ function Nav() {
     <nav>
       <h1>KWLT</h1>
       <div>
-        <p className="text-blue-800">Popular</p>
-        <p>Upcoming</p>
+        <p>Popular</p>
+        <p className="text-blue-700">Upcoming</p>
         <form action="">
           <input type="text" />
           <MagnifyingGlassIcon/>
