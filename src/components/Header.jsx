@@ -19,6 +19,18 @@ function Header() {
                 <button className='bg-white text-black px-3 py-3 rounded-md font-medium text-lg mt-5'>Watch now</button>
               </div>
             </div>
+
+            <div className='relative'>
+            <img src="https://images7.alphacoders.com/550/550739.jpg" alt="" className='w-full object-cover'/>
+            <div className=' dark-ov'></div>
+              <div className='text-box'>
+                <h1 className='text-4xl font-bold mb-5'>Interstellar</h1>
+                <p className='text-lg font-semibold leading-8'>
+                  During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. 
+                </p>
+                <button className='bg-white text-black px-3 py-3 rounded-md font-medium text-lg mt-5'>Watch now</button>
+              </div>
+            </div>
         </SplideSlide>
       </Splide>
     </section>

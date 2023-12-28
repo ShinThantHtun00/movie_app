@@ -3,7 +3,7 @@ import {MagnifyingGlassIcon} from "@heroicons/react/24/solid"
 function Nav() {
   return (
     <nav className="flex items-center justify-between bg-black text-white px-12 py-5">
-      <h1 className="text-4xl font-bold font-sans">MovieHub</h1>
+      <h1 className="text-4xl font-bold font-serif">MovieHub</h1>
       <div className="flex items-center space-x-5">
         <p className="text-xl font-semibold">Popular</p>
         <p className="text-xl font-semibold">Upcoming</p>
