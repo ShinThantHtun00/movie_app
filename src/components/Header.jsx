@@ -1,9 +1,13 @@
+
 import {Splide, SplideSlide} from "@splidejs/react-splide"
 import '@splidejs/react-splide/css';
 import HeaderCard from "./HeaderCard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function Header() {
+const Header = () => {
+
+  const [relatedMovies, setRelatedMovies] = useState([]);
+
     useEffect(() => {
       getRelatedMovies();
   },[]);
@@ -12,19 +16,25 @@ function Header() {
     const response = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=ae1aef421d4eefc14e88dc9097be2e49&language=en-US");
     
     const data = await response.json()
-    console.log(data);
-  }
-
-
+    setRelatedMovies(data.results)
+    console.log(data.results);
+  };
 
   return (
     <section>
       <Splide options={{
         type: "loop",
+        arrows : false,
       }}>
-        <SplideSlide>
-          <HeaderCard imgSrc={"https://images4.alphacoders.com/132/1323605.jpeg"} title={"Oppenheimer"}/>
-        </SplideSlide>
+
+        {
+          relatedMovies.map((movie) => {
+            return(
+              <SplideSlide>
+                <HeaderCard movie={movie}/>
+              </SplideSlide>
+            )
+          })}
       </Splide>
     </section>
   )
